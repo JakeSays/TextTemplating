@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Std.TextTemplating.SourceGenerator</id>
+    <version>1.0.5</version>
+    <title>T4 Template Preprocessor Source Generator</title>
+    <authors>JakeSays</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
+    <description>A T4 preprocessor as a roslyn source generator. Based on Mono's T4 template processor.</description>
+    <tags>T4 text templating</tags>
+    <repository type="git" commit="1326c65a824755affcbc30e2a00ce66d026e0208" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.CodeAnalysis.CSharp" version="4.12.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="bin/Release/netstandard2.0/Std.TextTemplating.SourceGenerator.dll" target="lib/netstandard2.0/"/>
+  </files>
+</package>

@@ -135,20 +135,20 @@ partial class TemplatingEngine
                         Output.BlankLine();
                         break;
                     case SegmentType.Expression:
-                        Output.WriteLine($"/*expr*/_output.Append(FormatObject({seg.Text}));");
+                        Output.WriteLine($"_output.Append(FormatObject({seg.Text}));");
                         break;
                     case SegmentType.Content:
                     {
                         var (quotedText, isMultiLine) = Output.QuoteString(seg.Text);
                         if (isMultiLine)
                         {
-                            Output.WriteLine("/*content*/_output.Append(");
+                            Output.WriteLine("_output.Append(");
                             Output.Ugh(quotedText);
                             Output.WriteLine(");");
                             break;
                         }
 
-                        Output.WriteLine($"/*content*/_output.Append({quotedText});");
+                        Output.WriteLine($"_output.Append({quotedText});");
                         break;
                     }
                     case SegmentType.Helper:

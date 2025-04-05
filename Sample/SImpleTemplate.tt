@@ -1,0 +1,7 @@
+<#@ template language="C#" #>
+<#@ class name="SimpleTemplate"#>
+<#@ namespace name="T4Happiness"#>
+<#@ parameter name="SomeText" type="System.String"#>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+Hello World from '<#= SomeText #>'!

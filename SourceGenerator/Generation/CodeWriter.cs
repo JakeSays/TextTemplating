@@ -832,11 +832,11 @@ public class CodeWriter
 
     private const int MaxLineLength = 120;
 
-    private (string Text, bool MultiLine)  QuoteSnippetStringCStyle(string value)
+    private (string Text, bool MultiLine) QuoteSnippetStringCStyle(string value)
     {
         var b = new StringBuilder(value.Length + 5);
 
-        b.Append("/*cstyle*/\"");
+        b.Append("\"");
 
         var isStringMultiline = false;
         var i = 0;
@@ -926,7 +926,7 @@ public class CodeWriter
 
         var isStringMultiline = false;
 
-        b.Append("/*verbatim*/@\"");
+        b.Append("@\"");
 
         for (var i = 0; i < value.Length; i++)
         {

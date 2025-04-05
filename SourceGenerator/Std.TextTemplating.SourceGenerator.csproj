@@ -9,6 +9,7 @@
 
         <RootNamespace>Std.TextTemplating</RootNamespace>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <CurrentVersion>1.0.8</CurrentVersion>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -16,21 +17,34 @@
         <PackageId>Std.TextTemplating.SourceGenerator</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <IncludeBuildOutput>false</IncludeBuildOutput>
-        <Version>1.0.5</Version>
+        <Version>$(CurrentVersion)</Version>
         <Title>T4 Template Preprocessor Source Generator</Title>
         <Authors>JakeSays</Authors>
         <Company>Fun Things, Inc.</Company>
         <Description>A T4 preprocessor as a roslyn source generator. Based on Mono's T4 template processor.</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageIconUrl>icon.png</PackageIconUrl>
+        <PackageIcon>icon.png</PackageIcon>
         <PackageTags>T4 text templating</PackageTags>
-        <PackageVersion>1.0.5</PackageVersion>
-    </PropertyGroup>    
+        <PackageVersion>$(CurrentVersion)</PackageVersion>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <IncludeBuildOutput>true</IncludeBuildOutput>
+        <BuildOutputTargetFolder>analyzers/dotnet/cs</BuildOutputTargetFolder>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <NoWarn>1701;1702;NU5128</NoWarn>
+    </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.11.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.12.0"/>
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="$(MSBuildThisFileDirectory)../README.md" Pack="true" PackagePath="/">
+          <Link>README.md</Link>
+      </None>
+      <None Include="icon.png" Pack="true" PackagePath="/"/>
     </ItemGroup>
 </Project>

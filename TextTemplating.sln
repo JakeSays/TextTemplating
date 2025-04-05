@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Std.TextTemplating.SourceGenerator", "Std.TextTemplating.SourceGenerator.csproj", "{7573DB06-17BF-4529-936A-D356AC32EF87}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Std.TextTemplating.SourceGenerator", "SourceGenerator/Std.TextTemplating.SourceGenerator.csproj", "{7573DB06-17BF-4529-936A-D356AC32EF87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{C268EF80-F616-4CCD-840A-441CECFDA4B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{7573DB06-17BF-4529-936A-D356AC32EF87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7573DB06-17BF-4529-936A-D356AC32EF87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7573DB06-17BF-4529-936A-D356AC32EF87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C268EF80-F616-4CCD-840A-441CECFDA4B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C268EF80-F616-4CCD-840A-441CECFDA4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C268EF80-F616-4CCD-840A-441CECFDA4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C268EF80-F616-4CCD-840A-441CECFDA4B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
