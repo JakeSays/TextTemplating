@@ -169,9 +169,12 @@ partial class TemplatingEngine
         foreach (var helper in helpers)
         {
             Output.BlankLine();
-            Output.LineDirectiveFile = helper.FileName;
-            Output.LinePragma(helper.Segment.StartLocation.Line);
-            Output.WriteBlock(Output.LiteralText(helper.Segment.Text));
+            if (_settings.LinePragmas)
+            {
+                Output.LineDirectiveFile = helper.FileName;
+                Output.LinePragma(helper.Segment.StartLocation.Line);
+            }
+            Output.Write(helper.Segment.Text);
         }
     }
 

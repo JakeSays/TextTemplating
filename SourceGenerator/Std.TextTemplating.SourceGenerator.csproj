@@ -9,7 +9,9 @@
 
         <RootNamespace>Std.TextTemplating</RootNamespace>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-        <CurrentVersion>1.0.8</CurrentVersion>
+        <CurrentVersion>1.0.9</CurrentVersion>
+        <AssemblyVersion>$(CurrentVersion).0</AssemblyVersion>
+        <FileVersion>$(CurrentVersion).0</FileVersion>
     </PropertyGroup>
 
     <PropertyGroup>
